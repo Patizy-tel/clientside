@@ -53,7 +53,7 @@ export default function MyTasksTable() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await  axios.get(`http://localhost:5000/api/task/mytask/${localStorage.getItem('username')}`);
+      const result = await  axios.get(`https://mytaskserver.herokuapp.com/api/task/mytask/${localStorage.getItem('username')}`);
         
       setData({tasks: result.data});
     };
@@ -64,7 +64,7 @@ export default function MyTasksTable() {
 
   const markasRead = (x) =>{
 
-    axios.put(`http://localhost:5000/api/task/readid/${x}`)
+    axios.put(`https://mytaskserver.herokuapp.com/api/task/readid/${x}`)
          .then(resp =>{
 
           alert('succe')

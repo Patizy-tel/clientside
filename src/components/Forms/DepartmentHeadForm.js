@@ -55,7 +55,7 @@ export default function SignUp() {
 useEffect(() => {
   const fetchData = async () => {
     const result = await axios(
-      'http://localhost:5000/api/departments',
+      'https://mytaskserver.herokuapp.com/api/departments',
       );
     setData({departments: result.data});
   };
@@ -90,7 +90,7 @@ function handleSubmit (e){
     departmentName:newUser.departmentName
   }
   
-  axios.post('http://localhost:5000/api/departmentsHeads' , userData)
+  axios.post('https://mytaskserver.herokuapp.com/api/departmentsHeads' , userData)
        .then(resp=>{
 
 

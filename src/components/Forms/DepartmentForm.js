@@ -63,7 +63,7 @@ const departmentData = {
   
 }
 
-  axios.post('http://localhost:5000/api/departments' , departmentData)
+  axios.post('https://mytaskserver.herokuapp.com/api/departments' , departmentData)
        .then(resp=>{
         console.log(resp.data)
 

@@ -48,7 +48,7 @@ export default function StickyHeadTable() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await  axios(`http://localhost:5000/api/task/${localStorage.getItem('id')}`);
+      const result = await  axios(`https://mytaskserver.herokuapp.com/api/task/${localStorage.getItem('id')}`);
         
       setData({tasks: result.data});
     };

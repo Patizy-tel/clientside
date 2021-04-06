@@ -59,7 +59,7 @@ export default function StickyHeadTable() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(`http://localhost:5000/api/employee/${localStorage.getItem('id')}`);
+      const result = await axios(`https://mytaskserver.herokuapp.com/api/employee/${localStorage.getItem('id')}`);
       setData({employees: result.data});
     };
  
@@ -67,11 +67,11 @@ export default function StickyHeadTable() {
   }, []);
   console.log(data)
 function DeleteIT (x,y){
-  axios.delete(`http://localhost:5000/api/employee/${x}`)
+  axios.delete(`https://mytaskserver.herokuapp.com/api/employee/${x}`)
        .then(resp=>{
 
          
-          axios.delete(`http://localhost:5000/api/users/${y}`)
+          axios.delete(`https://mytaskserver.herokuapp.com/api/users/${y}`)
                .then(resps=>{
 
 

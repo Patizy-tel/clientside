@@ -21,10 +21,10 @@ export default function Stats() {
 
     useEffect(() => {
         const fetchData = async () => {
-          const reports = await  axios(`http://localhost:5000/api/reports/totalReports`);
-          const tasks = await  axios(`http://localhost:5000/api/task/totalTasks`);
-          const depts = await  axios(`http://localhost:5000/api/departments/totalDepartments`);
-          const emps = await  axios(`http://localhost:5000/api/employee/totalEmployee`);
+          const reports = await  axios(`https://mytaskserver.herokuapp.com/api/reports/totalReports`);
+          const tasks = await  axios(`https://mytaskserver.herokuapp.com/api/task/totalTasks`);
+          const depts = await  axios(`https://mytaskserver.herokuapp.com/api/departments/totalDepartments`);
+          const emps = await  axios(`https://mytaskserver.herokuapp.com/api/employee/totalEmployee`);
 
              
           setReport(reports.data);

@@ -64,11 +64,11 @@ export default function StickyHeadTable() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        'http://localhost:5000/api/departments',
+        'https://mytaskserver.herokuapp.com/api/departments',
         );
 
         const result2 = await axios(
-          'http://localhost:5000/api/departmentsHeads',
+          'https://mytaskserver.herokuapp.com/api/departmentsHeads',
           );
   
     
@@ -86,15 +86,15 @@ export default function StickyHeadTable() {
  function DeleteIT (x ,y ,z){
 
 
-  axios.delete(`http://localhost:5000/api/departmentsHeads/${x}`)
+  axios.delete(`https://mytaskserver.herokuapp.com/api/departmentsHeads/${x}`)
        .then(resp=>{
 
          
-          axios.delete(`http://localhost:5000/api/departments/${y}`)
+          axios.delete(`https://mytaskserver.herokuapp.com/api/departments/${y}`)
                .then(resps=>{
 
 
-                axios.delete(`http://localhost:5000/api/users/${z}`)
+                axios.delete(`https://mytaskserver.herokuapp.com/api/users/${z}`)
                      .then(resp =>{
                       alert('success')
                       window.location.href = '/departments'

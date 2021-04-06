@@ -52,7 +52,7 @@ export default function SignUp() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result =  await axios(`http://localhost:5000 /api/departmentsHeads`);
+      const result =  await axios(`https://mytaskserver.herokuapp.com /api/departmentsHeads`);
       
       setData(result.data);
     };
@@ -79,7 +79,7 @@ function handleSubmit (e){
   console.log(taskData)
 
 
-  axios.post('http://localhost:5000 /api/reports' , taskData)
+  axios.post('https://mytaskserver.herokuapp.com /api/reports' , taskData)
        .then(resp=>{
 
         alert('Created New Task Sucessfully!')

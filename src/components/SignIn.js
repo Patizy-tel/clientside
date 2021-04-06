@@ -69,7 +69,7 @@ export default function SignIn() {
         e.preventDefault()
 
         axios
-            .post('http://localhost:5000/api/users/login', userData)
+            .post('https://mytaskserver.herokuapp.com/api/users/login', userData)
             .then(resp => {
 
                 localStorage.setItem('token', resp.data.token)

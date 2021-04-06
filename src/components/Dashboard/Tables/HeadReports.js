@@ -61,7 +61,7 @@ export default function MyTasksTable() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await  axios.get(`http://localhost:5000/api/reports/head/${localStorage.getItem('username')}`);
+      const result = await  axios.get(`https://mytaskserver.herokuapp.com/api/reports/head/${localStorage.getItem('username')}`);
         
       setData({tasks: result.data});
     };
