@@ -102,7 +102,7 @@ export default function SignIn() {
 
 
             <Typography component="h1" variant="h5"  style={{marginTop:0}}>
-             TASK MANAGMENT SYSTEM
+       Sherwood weekly planner
         </Typography>
                 <Typography component="h1" variant="h5">
                     <img src={logo} height="200" />
